@@ -10,7 +10,8 @@ class Projects extends Component {
                 return(
                     <ProjectItem key={project.title} project={project} />
                 );
-            });
+            })
+
         }
 
         const projects = {
@@ -21,17 +22,22 @@ class Projects extends Component {
             margin: '20px'
         };
         const header = {
-            color: 'blue'
+            color: 'blue',
+            background: '#f4b3bb',
+            padding: '5px',
+            marginBottom: '10px'
         };
         const output = {
-            color: 'violet'
+            listStyleType: 'none'
         };
 
         return (
             <div className="projects" style={projects}>
-                <h4 style={header}>
-                    Currently Listed Courses
-                </h4>
+                <div style={header}>
+                    <h4>
+                        Currently Listed Courses
+                    </h4>
+                </div>
                 <span style={output}>
                     {projectItems}
                 </span>

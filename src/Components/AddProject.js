@@ -24,7 +24,6 @@ class AddProject extends Component {
                 this.props.addProject(this.state.newProject);
             });
         }
-
         e.preventDefault();
     }
 
@@ -36,15 +35,23 @@ class AddProject extends Component {
         const addproject ={
             background: '#345345',
             width: '300px',
-            color: 'red',
+            color: 'darkblue',
             border: '1px solid black',
             padding: '5px',
             margin: '20px'
         };
+        const heading ={
+            background: '#f45345',
+            padding: '5px',
+            marginBottom: '10px'
+        };
 
         return (
             <div className="addProject" style={addproject}>
-                <h4>Add Project</h4>
+                <div style={heading}>
+                    <h4>Add Project</h4>
+                </div>
+
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                         <label>Title</label><br/>

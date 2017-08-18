@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects';
 import AddProject from './Components/AddProject';
+import logo from './Components/logo';
 import './App.css';
 
 class App extends Component {
@@ -51,6 +52,7 @@ class App extends Component {
 
     return (
       <div className="App" style={app}>
+        <logo logo />
         <AddProject addProject={this.handleAddProject.bind(this)} style={add_project} />
         <Projects projects={this.state.projects} style={projects} />
       </div>
